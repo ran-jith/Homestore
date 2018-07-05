@@ -1,6 +1,14 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+
+class Store(models.Model):
+    name = models.CharField(max_length=100)
+    slug = models.SlugField()
+    desc = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    #thump = models.ImageField(default='default.jpeg', blank=True)
+    #seller = models.ForeignKey(User,default=None)
+
+    def __str__(self):
+        return self.name
