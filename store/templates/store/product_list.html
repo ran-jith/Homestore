@@ -18,6 +18,11 @@
       {% for prod in product %}
         <div class="prod">
           <h2><a href="{% url 'store:detail' slug=prod.slug %}">{{ prod.name }}</a></h2> <!--here articles is the app name  -->
+          <h3>Prize==>{{ prod.prize }} Rupees
+            {% if prod.prize < 10 %}
+               Only
+            {% endif %}
+            </h3>
           <p>{{ prod.snippet }}</p>
           <p>{{ prod.desc }}
           <p>{{ prod.date }}</p>

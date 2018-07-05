@@ -1,0 +1,19 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+<div class="product-detail">
+  <div class="product">
+    <img src="{{ prodd.thump.url }}/"> <!-- when use img field in model use url last -->
+    <h2>{{ prodd.name }}</h2>
+    <h3>Prize==>{{ prodd.prize }} Rupees
+      {% if prodd.prize < 10 %}
+        Only
+      {% endif %}
+    </h3><input type="button" value="BuyNow" name="buy">
+    <p>{{ prodd.desc }}</p>
+    <p>{{ prodd.date }}</p>
+
+  </div>
+</div>
+
+{% endblock %}

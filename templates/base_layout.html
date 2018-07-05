@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <!-- in the below case we can also use 'home' instead of 'articles:list' -->
-      <h1><a href="{% url 'store:list' %}"><img src="{% static 'logo2.jpg' %}"/></a></h1> <!--django looks a url named list. -->
+      <h1><a href="{% url 'store:list' %}"><input type="button" value="Back To Store" text-align="left"></a></h1> <!--django looks a url named list. -->
 
       {% block content %} <!--create a block named content -->
       {% endblock %}

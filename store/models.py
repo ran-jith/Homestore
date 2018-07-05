@@ -8,8 +8,8 @@ class Store(models.Model):
     desc = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     prize = models.IntegerField()
-    #thump = models.ImageField(default='default.jpeg', blank=True)
-    #seller = models.ForeignKey(User,default=None)
+    thump = models.ImageField(default='default.jpeg', blank=True)
+    seller = models.ForeignKey(User,default=None)
 
     def __str__(self):
         return self.name

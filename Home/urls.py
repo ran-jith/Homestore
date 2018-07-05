@@ -13,3 +13,10 @@ urlpatterns = [
     url(r'^about/$', views.about),
     url(r'^home/$', views.homepage),
 ]
+
+
+#for image
+urlpatterns += staticfiles_urlpatterns() #this is for add styles,after creating this need to edit settings.py file
+
+#for media
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

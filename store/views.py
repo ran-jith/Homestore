@@ -10,5 +10,8 @@ def product_list(request):
 
     #return HttpResponse("product list")
 
-def product_detail(request):
-    return HttpResponse("product details")
+def product_detail(request, slug):
+    prods = Store.objects.get(slug=slug)
+    return render(request,'store/product_detail.html',{ 'prodd':prods })
+    
+    #return HttpResponse("product details")
