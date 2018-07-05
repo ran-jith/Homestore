@@ -7,6 +7,7 @@ class Store(models.Model):
     slug = models.SlugField()
     desc = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    prize = models.IntegerField()
     #thump = models.ImageField(default='default.jpeg', blank=True)
     #seller = models.ForeignKey(User,default=None)
 

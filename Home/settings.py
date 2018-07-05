@@ -119,3 +119,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+os.path.join(BASE_DIR,'assets'), #assets is my directory name that contain styles
+)
+
+
+
+#for upload media eg: /media/pic.jpg
+MEDIA_URL="/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR,"media")
