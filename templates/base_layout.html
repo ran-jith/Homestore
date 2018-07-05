@@ -4,14 +4,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Article</title>
+    <title>product</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}"><!--or href="/staric/styles.css" so above code is not req. -->
   </head>
   <body>
     <div class="wrapper">
       <!-- in the below case we can also use 'home' instead of 'articles:list' -->
       <h1><a href="{% url 'store:list' %}"><img src="{% static 'logo2.jpg' %}"/></a></h1> <!--django looks a url named list. -->
-    
+
       {% block content %} <!--create a block named content -->
       {% endblock %}
     </div>

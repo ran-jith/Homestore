@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}"> #or href="/staric/styles.css" so above code is not req.
   </head>
   <body> -->
-    <h1>Article list</h1>
-    <div class="articles">
+    <h1>products List</h1>
+    <div class="products">
       {% for prod in product %}
-        <div class="art">
+        <div class="prod">
           <h2><a href="{% url 'store:detail' slug=prod.slug %}">{{ prod.name }}</a></h2> <!--here articles is the app name  -->
-          <p>{{ pro.snippet }}</p>
+          <p>{{ prod.snippet }}</p>
+          <p>{{ prod.desc }}
           <p>{{ prod.date }}</p>
         </div>
       {% endfor %}
